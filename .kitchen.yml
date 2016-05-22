@@ -1,0 +1,17 @@
+---
+driver:
+  name: vagrant
+driver_config:
+  require_chef_omnibus: latest
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: centos-6.5
+
+suites:
+  - name: default
+    run_list:
+      role[ciklum]
+    attributes:

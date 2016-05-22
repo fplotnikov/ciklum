@@ -16,6 +16,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Upgrade Chef to the latest
   # config.vm.provision :shell, inline: 'sudo true && curl -L https://www.opscode.com/chef/install.sh | sudo bash'
+  config.omnibus.chef_version = :latest
 
   # Provision with Chef
   config.vm.provision :chef_solo do |chef|

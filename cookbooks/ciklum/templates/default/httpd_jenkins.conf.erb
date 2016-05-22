@@ -1,0 +1,11 @@
+ProxyRequests Off
+ProxyPreserveHost On
+<Proxy *>
+    Order deny,allow
+    Allow from all
+</Proxy>
+
+<Location /jenkins>
+  ProxyPass http://127.0.0.1:8080/jenkins
+  ProxyPassReverse http://127.0.0.1:8080/jenkins
+</Location>
